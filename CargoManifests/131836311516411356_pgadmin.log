@@ -1,0 +1,31 @@
+2018-09-28 13:17:28 ERROR  : ERROR:  insert or update on table "IdentityEmails" violates foreign key constraint "IdentityEmails_identity_id_fkey"
+DETAIL:  Key (identity_id)=(1001) is not present in table "Identity".
+2018-09-28 13:18:22 ERROR  : server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2018-10-04 19:00:23 ERROR  : ERROR:  function getdate() does not exist
+LINE 1: SELECT DATEDIFF(started_transaction, GETDATE()) as time from...
+                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-10-04 19:01:03 ERROR  : ERROR:  function datediff(timestamp without time zone, timestamp with time zone) does not exist
+LINE 1: SELECT DATEDIFF(started_transaction, now()) as time from ce....
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-10-04 19:02:55 ERROR  : ERROR:  column "year" does not exist
+LINE 1: SELECT DATEDIFF(year, started_transaction, now())as time fro...
+                        ^
+2018-10-04 19:03:07 ERROR  : ERROR:  column "ss" does not exist
+LINE 1: SELECT DATEDIFF(ss, started_transaction, now())as time from ...
+                        ^
+2018-10-04 19:03:32 ERROR  : ERROR:  column "month" does not exist
+LINE 1: SELECT DATEDIFF(month, '2011-10-02', '2012-01-01');
+                        ^
+2018-10-04 19:09:59 ERROR  : ERROR:  syntax error at or near "*"
+LINE 1: delete * from ce.change_events;
+               ^
+2018-10-04 21:50:45 ERROR  : ERROR:  column "2018-10-04 21:50:19" does not exist
+LINE 1: SELECT ("2018-10-04 21:50:19" - last_modified_date::timestam...
+                ^
+2018-10-05 12:59:52 ERROR  : ERROR:  syntax error at or near "*"
+LINE 1: delete * from ce.change_events;
+               ^
